@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -26,6 +27,13 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
+            }
         ]
     },
 
@@ -36,11 +44,13 @@ module.exports = {
             filename: '[name].[hash].js',
         }),
 
+        new ExtractTextPlugin('style-[hash].css'),
+
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '/client/index.html'),
             filename: 'index.html',
             inject: 'body',
-        }),
+        })
 
     ],
 
