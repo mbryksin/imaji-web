@@ -1,4 +1,82 @@
-h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
+.tags_container {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 40px;
+}
+
+h1, .h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    padding: 0;
+    margin: 1.5em 0 1em;
+    box-sizing: border-box;
+    word-spacing: normal;
+    letter-spacing: normal;
+    color: #232839;
+    cursor: default;
+
+    display: inherit;
+}
+
+.h2-boom, a, small {
+    display: inherit;
+    font-family: 'Space Mono', monospace;
+}
+
+p {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    padding: 0;
+    margin: 1.5em 0 1em;
+    box-sizing: border-box;
+    word-spacing: normal;
+    letter-spacing: normal;
+    color: #232839;
+    cursor: default;
+
+    display: inherit;
+}
+
+a {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    padding: 0;
+    margin: 1.5em 0 1em;
+    box-sizing: border-box;
+    word-spacing: normal;
+    letter-spacing: normal;
+    color: #0d9;
+    cursor: auto;
+    text-decoration: none;
+
+    display: inherit;
+}
+
+a:hover{
+    color: #000;
+}
+
+a:visited{
+    color: #0d9;
+}
+
+small {
+    font-size: 12px;
+    display: inherit;
+    font-family: 'Space Mono', monospace;
+}
+
+.link_s {
+    font-size: 12px;
+}
+
+.tag {
+    padding-right: 8px;
 }

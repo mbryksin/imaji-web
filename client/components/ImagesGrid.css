@@ -1,0 +1,29 @@
+.content {
+    margin-left: 40px;
+    margin-top: 16px;
+
+    position: absolute;
+    height: auto;
+    width: 76%;
+    right: 0;
+}
+
+
+.content_element {
+    width: 640px;
+    margin-bottom: 64px;
+}
+
+.content_image {
+    width: inherit;
+}
+
+.small__centred {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.comment{
+    padding-right: 8px;
+}

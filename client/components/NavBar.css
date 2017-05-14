@@ -1,0 +1,22 @@
+.navigation {
+    width: 24%;
+    height: 100%;
+    padding: 8px 40px 24px 16px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    overflow-y:scroll;
+    position: fixed;
+    box-sizing: border-box;
+}
+
+.logo_inline {
+    display: inline;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
