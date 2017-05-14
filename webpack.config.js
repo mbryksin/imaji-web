@@ -6,12 +6,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         app: path.join(__dirname, '/client/'),
-        vendor: ['react', 'react-dom', 'react-router'],
+        vendor: ['react', 'react-dom', 'react-router']
     },
 
     output: {
-        filename: 'bundle.[hash].js',
-        path: __dirname + "/dist"
+        filename: 'bundle.js',
+        path: __dirname + "/client/build/"
     },
 
     resolve: {
@@ -29,6 +29,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: "css-loader"
@@ -41,10 +42,10 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: Infinity,
-            filename: '[name].[hash].js',
+            filename: '[name].js',
         }),
 
-        new ExtractTextPlugin('style-[hash].css'),
+        new ExtractTextPlugin('style.css'),
 
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '/client/index.html'),

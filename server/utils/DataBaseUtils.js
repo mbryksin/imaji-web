@@ -18,7 +18,7 @@ export function createImage(data) {
         sourceLink: data.sourceLink,
         sourceText: data.sourceText,
         active: data.active,
-        comment: data.info,
+        comment: data.comment,
         createdAt: data.createdAt,
         updatedAt: data.createdAt
     });
@@ -27,4 +27,30 @@ export function createImage(data) {
 
 export function deteteImage(id) {
     return Image.findById(id).remove();
+}
+
+export function seed() {
+    console.log('Seeding images...');
+
+    const images = [
+        {
+            "imageLink": "https://d13yacurqjgara.cloudfront.net/users/134836/screenshots/3045524/michael.jpg",
+            "sourceLink": "https://dribbble.com/shots/3045524-Michael",
+            "sourceText": "Michael by Calvin Chopp",
+            "active": "true",
+            "comment": "image 1",
+        },
+        {
+            "imageLink": "https://d13yacurqjgara.cloudfront.net/users/43342/screenshots/2471960/epic_themontues-green-copy.gif",
+            "sourceLink": "https://dribbble.com/shots/2472295-Camera-Natrium",
+            "sourceText": "Epicurrence // The Montuesby ∆ Studio–JQ ∆",
+            "active": "true",
+            "comment": "image 2",
+        }
+    ];
+
+    images.forEach(function(element, index, array) {
+        createImage(element);
+        console.log(element.comment + ' saved');
+    });
 }

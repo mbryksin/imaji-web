@@ -4,6 +4,7 @@ import * as db from './utils/DataBaseUtils';
 import { serverPort } from '../config.json';
 
 db.setUpConnection();
+// db.seed();
 
 const app = express();
 app.use(bodyParser.json());

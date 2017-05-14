@@ -8,8 +8,8 @@ const ImageSchema = new Schema({
     sourceText: { type: String },
     active: { type: Boolean, required: true }, //add default: 'true'
     comment: { type: String },
-    createdAt: { type: Date },
-    updatedAt: { type: Date }
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
 });
 
 const Image = mongoose.model('Image', ImageSchema);
