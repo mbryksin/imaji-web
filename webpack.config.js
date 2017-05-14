@@ -1,17 +1,15 @@
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
 
 module.exports = {
-    context: __dirname + "/src",
-
     entry: {
-        app: "./app.js",
+        app: path.join(__dirname, '/client/'),
         vendor: ['react', 'react-dom', 'react-router'],
     },
 
     output: {
-        filename: "bundle.js",
+        filename: 'bundle.[hash].js',
         path: __dirname + "/dist"
     },
 
@@ -27,7 +25,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            }
+            },
         ]
     },
 
@@ -39,10 +37,11 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, '/src/index.html'),
+            template: path.join(__dirname, '/client/index.html'),
             filename: 'index.html',
             inject: 'body',
         }),
+
     ],
 
 };

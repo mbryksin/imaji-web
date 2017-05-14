@@ -1,0 +1,9 @@
+{
+  "apiPrefix": "http://localhost:5050",
+  "serverPort": "5050",
+  "db": {
+    "name": "images",
+    "host": "localhost",
+    "port": "27017"
+  }
+}
