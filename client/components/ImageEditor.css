@@ -1,0 +1,11 @@
+.upload_form {
+    display: block;
+    alignment: top;
+    margin-bottom: 24px;
+}
+
+.upload_form__control {
+    display:inline-block;
+    vertical-align:top;
+    margin-right: 2px;
+}
